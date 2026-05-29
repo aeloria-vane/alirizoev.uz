@@ -38,7 +38,7 @@ export default function Venue() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Ресторан Гранд Султан на карте"
+                title="Grand Sultan · карта"
               />
             </div>
           </div>

@@ -9,7 +9,7 @@ export default function Couple() {
       <div className="mx-auto max-w-6xl">
         <Reveal className="mb-16 sm:mb-20 text-center">
           <p className="font-body text-[10px] sm:text-[11px] font-light tracking-[0.5em] uppercase text-gold-600 mb-6">
-            Жених &amp; Невеста
+            Двое · Одна история
           </p>
           <OrnamentDivider symbol="❦" />
         </Reveal>
@@ -21,22 +21,21 @@ export default function Couple() {
               <div className="absolute inset-2 border border-gold-400/40 z-10 pointer-events-none" />
               <Image
                 src="/images/photo-2.jpg"
-                alt={wedding.groomFirstName}
+                alt={wedding.groom}
                 fill
                 sizes="(max-width: 768px) 80vw, 30vw"
                 className="object-cover"
                 style={{ objectPosition: 'center 25%' }}
               />
             </div>
-            <p className="mt-8 font-body text-[10px] tracking-[0.45em] uppercase text-gold-600">
-              Жених
-            </p>
-            <h3 className="mt-3 font-display italic font-light text-4xl sm:text-5xl text-ink">
-              {wedding.groomFirstName}
+            <h3 className="mt-8 font-display italic font-light text-4xl sm:text-5xl text-ink leading-none">
+              {wedding.groom}
             </h3>
-            <p className="mt-3 font-display italic text-sm text-ink-soft">
-              сын семьи {wedding.groomFamily}
-            </p>
+            <span className="mt-5 inline-flex items-center gap-3 text-gold-500">
+              <span className="block h-px w-8 bg-gold-500" />
+              <span className="font-display italic text-base sm:text-lg">его сердце</span>
+              <span className="block h-px w-8 bg-gold-500" />
+            </span>
           </Reveal>
 
           {/* Divider with monogram */}
@@ -67,24 +66,30 @@ export default function Couple() {
               <div className="absolute inset-2 border border-gold-400/40 z-10 pointer-events-none" />
               <Image
                 src="/images/photo-3.jpg"
-                alt={wedding.brideFirstName}
+                alt={wedding.bride}
                 fill
                 sizes="(max-width: 768px) 80vw, 30vw"
                 className="object-cover"
                 style={{ objectPosition: 'center 25%' }}
               />
             </div>
-            <p className="mt-8 font-body text-[10px] tracking-[0.45em] uppercase text-gold-600">
-              Невеста
-            </p>
-            <h3 className="mt-3 font-display italic font-light text-4xl sm:text-5xl text-ink">
-              {wedding.brideFirstName}
+            <h3 className="mt-8 font-display italic font-light text-4xl sm:text-5xl text-ink leading-none">
+              {wedding.bride}
             </h3>
-            <p className="mt-3 font-display italic text-sm text-ink-soft">
-              дочь семьи {wedding.brideFamily}
-            </p>
+            <span className="mt-5 inline-flex items-center gap-3 text-gold-500">
+              <span className="block h-px w-8 bg-gold-500" />
+              <span className="font-display italic text-base sm:text-lg">его душа</span>
+              <span className="block h-px w-8 bg-gold-500" />
+            </span>
           </Reveal>
         </div>
+
+        {/* Bottom unifying line */}
+        <Reveal delay={400} className="mt-16 sm:mt-20 text-center">
+          <p className="font-display italic text-xl sm:text-2xl text-ink-soft max-w-xl mx-auto leading-relaxed">
+            Две жизни, что отныне идут одной дорогой.
+          </p>
+        </Reveal>
       </div>
     </section>
   )

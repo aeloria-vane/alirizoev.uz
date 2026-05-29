@@ -18,7 +18,6 @@ export async function GET(req: Request) {
     .trim()
     .slice(0, 60)
 
-  // Load fonts (Google Fonts static .ttf served from gstatic)
   const [serifItalic, sans] = await Promise.all([
     loadFont('https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jDOjw.ttf'),
     loadFont('https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf'),
@@ -41,52 +40,13 @@ export async function GET(req: Request) {
           position: 'relative',
         }}
       >
-        {/* Decorative borders */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 32,
-            left: 32,
-            right: 32,
-            bottom: 32,
-            border: '1px solid rgba(201, 169, 106, 0.5)',
-            display: 'flex',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            top: 44,
-            left: 44,
-            right: 44,
-            bottom: 44,
-            border: '1px solid rgba(201, 169, 106, 0.2)',
-            display: 'flex',
-          }}
-        />
+        <div style={{ position: 'absolute', top: 32, left: 32, right: 32, bottom: 32, border: '1px solid rgba(201, 169, 106, 0.5)', display: 'flex' }} />
+        <div style={{ position: 'absolute', top: 44, left: 44, right: 44, bottom: 44, border: '1px solid rgba(201, 169, 106, 0.2)', display: 'flex' }} />
 
-        {/* Top label */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 18,
-            color: '#C9A96A',
-            marginBottom: 16,
-            marginTop: -40,
-          }}
-        >
+        <div style={{ display: 'flex', alignItems: 'center', gap: 18, color: '#C9A96A', marginBottom: 16, marginTop: -40 }}>
           <div style={{ width: 60, height: 1, background: '#C9A96A', display: 'flex' }} />
-          <div
-            style={{
-              fontSize: 13,
-              letterSpacing: 8,
-              fontWeight: 300,
-              fontFamily: 'Inter',
-              display: 'flex',
-            }}
-          >
-            СВАДЕБНОЕ ПРИГЛАШЕНИЕ
+          <div style={{ fontSize: 13, letterSpacing: 8, fontFamily: 'Inter', fontWeight: 300, display: 'flex' }}>
+            SAVE THE DATE
           </div>
           <div style={{ width: 60, height: 1, background: '#C9A96A', display: 'flex' }} />
         </div>
@@ -106,55 +66,18 @@ export async function GET(req: Request) {
           </div>
         )}
 
-        {/* Names */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            lineHeight: 0.95,
-          }}
-        >
-          <div
-            style={{
-              fontSize: 116,
-              fontFamily: 'Cormorant',
-              fontStyle: 'italic',
-              fontWeight: 400,
-              letterSpacing: -1,
-              display: 'flex',
-            }}
-          >
-            {wedding.groomFirstName}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', lineHeight: 0.95 }}>
+          <div style={{ fontSize: 120, fontFamily: 'Cormorant', fontStyle: 'italic', fontWeight: 400, letterSpacing: -1, display: 'flex' }}>
+            {wedding.groom}
           </div>
-          <div
-            style={{
-              fontSize: 78,
-              color: '#D4B981',
-              fontFamily: 'Cormorant',
-              fontStyle: 'italic',
-              fontWeight: 400,
-              margin: '6px 0',
-              display: 'flex',
-            }}
-          >
+          <div style={{ fontSize: 78, color: '#D4B981', fontFamily: 'Cormorant', fontStyle: 'italic', fontWeight: 400, margin: '6px 0', display: 'flex' }}>
             &amp;
           </div>
-          <div
-            style={{
-              fontSize: 116,
-              fontFamily: 'Cormorant',
-              fontStyle: 'italic',
-              fontWeight: 400,
-              letterSpacing: -1,
-              display: 'flex',
-            }}
-          >
-            {wedding.brideFirstName}
+          <div style={{ fontSize: 120, fontFamily: 'Cormorant', fontStyle: 'italic', fontWeight: 400, letterSpacing: -1, display: 'flex' }}>
+            {wedding.bride}
           </div>
         </div>
 
-        {/* Divider */}
         <div
           style={{
             width: 180,
@@ -165,42 +88,15 @@ export async function GET(req: Request) {
           }}
         />
 
-        {/* Date / time / venue */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: 4,
-          }}
-        >
-          <div
-            style={{
-              fontSize: 15,
-              letterSpacing: 6,
-              color: 'rgba(251, 248, 243, 0.9)',
-              fontFamily: 'Inter',
-              fontWeight: 300,
-              display: 'flex',
-            }}
-          >
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+          <div style={{ fontSize: 15, letterSpacing: 6, color: 'rgba(251, 248, 243, 0.9)', fontFamily: 'Inter', fontWeight: 300, display: 'flex' }}>
             5 ИЮНЯ 2026  ·  18:00
           </div>
-          <div
-            style={{
-              fontSize: 24,
-              fontFamily: 'Cormorant',
-              fontStyle: 'italic',
-              color: '#D4B981',
-              marginTop: 6,
-              display: 'flex',
-            }}
-          >
-            Ресторан «{wedding.venue}»
+          <div style={{ fontSize: 24, fontFamily: 'Cormorant', fontStyle: 'italic', color: '#D4B981', marginTop: 6, display: 'flex' }}>
+            {wedding.venue}
           </div>
         </div>
 
-        {/* Bottom signature */}
         <div
           style={{
             position: 'absolute',

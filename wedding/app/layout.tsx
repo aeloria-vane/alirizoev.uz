@@ -31,13 +31,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Бобозариф & Нигина · 5 июня 2026',
+  title: 'Bobozarif & Nigina · Save the Date',
   description:
-    'Свадебное приглашение. Семья Фархадовых приглашает Вас разделить с нами день нашей свадьбы — 5 июня 2026 года, ресторан «Гранд Султан».',
+    'Save the Date · 5 июня 2026 года, Grand Sultan. Семьи Алиризаевых и Меликовых будут счастливы разделить с Вами этот особенный день.',
   openGraph: {
-    title: 'Бобозариф & Нигина · 5 июня 2026',
+    title: 'Bobozarif & Nigina · Save the Date',
     description:
-      'Семья Фархадовых приглашает Вас разделить с нами этот особенный день.',
+      'Семьи Алиризаевых и Меликовых будут счастливы разделить с Вами этот особенный день.',
     type: 'website',
     locale: 'ru_RU',
     images: [
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
         url: '/api/og',
         width: 1200,
         height: 630,
-        alt: 'Свадебное приглашение Бобозарифа и Нигины',
+        alt: 'Bobozarif & Nigina · Save the Date',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Бобозариф & Нигина · 5 июня 2026',
-    description: 'Семья Фархадовых приглашает Вас на свадьбу.',
+    title: 'Bobozarif & Nigina · Save the Date',
+    description: 'Семьи Алиризаевых и Меликовых будут счастливы видеть Вас.',
     images: ['/api/og'],
   },
   icons: {

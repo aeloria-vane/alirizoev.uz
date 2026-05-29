@@ -1,14 +1,21 @@
 export const wedding = {
-  groomFirstName: 'Бобозариф',
-  brideFirstName: 'Нигина',
+  // Latin (primary display in the invitation)
+  groom: 'Bobozarif',
+  bride: 'Nigina',
+  groomInitial: 'B',
+  brideInitial: 'N',
+  // Cyrillic (used in long-form text)
+  groomCyr: 'Бобозариф',
+  brideCyr: 'Нигина',
   groomFamily: 'Алиризаевых',
-  brideFamily: 'Фархадовых',
+  brideFamily: 'Меликовых',
   date: new Date('2026-06-05T18:00:00+05:00'),
   dateDisplay: '5 июня 2026',
   dateShort: '05.06.2026',
   dayOfWeek: 'пятница',
   time: '18:00',
-  venue: 'Гранд Султан',
+  venue: 'Grand Sultan',
+  venueRu: 'Гранд Султан',
   venueType: 'Ресторан',
   city: 'Самарканд',
   coords: { lat: 39.684395, lng: 66.985071 },
@@ -16,6 +23,7 @@ export const wedding = {
     label: 'Дресс-код',
     description: 'Праздничный · приглушённые тёплые тона',
     palette: ['#1F3A2E', '#B08D57', '#2A2520', '#F4EDE0'],
+    quote: 'Ваше присутствие — главное украшение нашего вечера.',
   },
   programme: [
     { time: '18:00', title: 'Сбор гостей', subtitle: 'Welcome' },

@@ -74,20 +74,20 @@ export default function EntrySplash() {
             >
               <span className="block h-px w-10 bg-ivory-50/60" />
               <p className="font-body text-[10px] font-light tracking-[0.5em] uppercase text-ivory-50/85">
-                Свадебное приглашение
+                Save the Date
               </p>
               <span className="block h-px w-10 bg-ivory-50/60" />
             </motion.div>
 
-            {/* Monogram */}
+            {/* Monogram B&N */}
             <motion.div
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, ease, delay: 0.4 }}
               className="mx-auto mb-8 flex items-center justify-center w-20 h-20 rounded-full border border-gold-400/55"
             >
-              <span className="font-display italic font-light text-3xl text-gold-300 leading-none">
-                Б<span className="text-gold-300/80">·</span>Н
+              <span className="font-display italic font-light text-2xl text-gold-300 leading-none tracking-tight">
+                {wedding.groomInitial}<span className="text-gold-300/80">&amp;</span>{wedding.brideInitial}
               </span>
             </motion.div>
 
@@ -98,9 +98,9 @@ export default function EntrySplash() {
               transition={{ duration: 1.3, ease, delay: 0.55 }}
               className="font-display font-light leading-[0.95] tracking-tight"
             >
-              <span className="block text-4xl sm:text-5xl italic">{wedding.groomFirstName}</span>
+              <span className="block text-4xl sm:text-5xl italic">{wedding.groom}</span>
               <span className="block my-2 sm:my-3 font-script text-2xl sm:text-3xl text-gold-300">&amp;</span>
-              <span className="block text-4xl sm:text-5xl italic">{wedding.brideFirstName}</span>
+              <span className="block text-4xl sm:text-5xl italic">{wedding.bride}</span>
             </motion.h1>
 
             <motion.p

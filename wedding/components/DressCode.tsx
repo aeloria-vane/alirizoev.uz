@@ -47,6 +47,14 @@ export default function DressCode() {
           <span className="font-display italic text-sm text-ink-soft">с любовью к деталям</span>
           <span className="block h-px w-10 bg-gradient-to-r from-gold-500 to-transparent" />
         </Reveal>
+
+        <Reveal delay={650} className="mt-16 sm:mt-20">
+          <p className="font-script text-3xl sm:text-4xl text-gold-600 mb-4 leading-none">«</p>
+          <p className="font-display italic font-light text-2xl sm:text-3xl md:text-[34px] text-ink leading-snug max-w-2xl mx-auto">
+            {wedding.dressCode.quote}
+          </p>
+          <span className="block mx-auto mt-8 h-px w-24 bg-gradient-to-r from-transparent via-gold-500 to-transparent" />
+        </Reveal>
       </div>
     </section>
   )

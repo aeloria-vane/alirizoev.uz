@@ -19,11 +19,11 @@ export default function Footer() {
 
         <Reveal delay={150}>
           <h2 className="font-display font-light leading-[1] text-ivory-50">
-            <span className="block text-4xl sm:text-6xl italic">{wedding.groomFirstName}</span>
+            <span className="block text-4xl sm:text-6xl italic">{wedding.groom}</span>
             <span className="block my-3 sm:my-4 font-script text-3xl sm:text-5xl text-gold-300">
               &amp;
             </span>
-            <span className="block text-4xl sm:text-6xl italic">{wedding.brideFirstName}</span>
+            <span className="block text-4xl sm:text-6xl italic">{wedding.bride}</span>
           </h2>
         </Reveal>
 
@@ -37,20 +37,14 @@ export default function Footer() {
           </p>
         </Reveal>
 
-        <Reveal delay={450} className="mt-14 flex flex-col items-center gap-4">
-          {/* Monogram */}
+        <Reveal delay={450} className="mt-14 flex flex-col items-center gap-3">
+          {/* Monogram B&N */}
           <div className="flex items-center justify-center w-16 h-16 border border-gold-400/45 rounded-full">
             <span className="font-display italic font-light text-2xl text-gold-300 leading-none tracking-tight">
-              Б<span className="text-gold-300/80">·</span>Н
+              {wedding.groomInitial}<span className="text-gold-300/80">&amp;</span>{wedding.brideInitial}
             </span>
           </div>
-          <span className="font-script text-3xl text-gold-300 mt-2">с любовью</span>
-          <p className="font-body text-[10px] tracking-[0.45em] uppercase text-ivory-50/55 leading-relaxed">
-            Семьи {wedding.groomFamily}
-            <span className="mx-2 text-gold-300/70">·</span>
-            {wedding.brideFamily}
-          </p>
-          <p className="font-body text-[10px] tracking-[0.45em] uppercase text-ivory-50/45">2026</p>
+          <p className="font-body text-[10px] tracking-[0.45em] uppercase text-ivory-50/45 mt-2">2026</p>
         </Reveal>
       </div>
 
