@@ -4,7 +4,6 @@ import Couple from '@/components/Couple'
 import Countdown from '@/components/Countdown'
 import Details from '@/components/Details'
 import Venue from '@/components/Venue'
-import Quote from '@/components/Quote'
 import Gallery from '@/components/Gallery'
 import Programme from '@/components/Programme'
 import DressCode from '@/components/DressCode'
@@ -24,7 +23,6 @@ export default function Page({ searchParams }: { searchParams: SearchParams }) {
       <Hero />
       <Greeting guestName={guestName} />
       <Couple />
-      <Quote />
       <Countdown />
       <Details />
       <Programme />

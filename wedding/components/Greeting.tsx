@@ -26,7 +26,7 @@ export default function Greeting({ guestName }: { guestName: string }) {
 
         <Reveal delay={150}>
           <p className="font-display italic font-light text-2xl sm:text-3xl text-gold-600">
-            {hasName ? 'Дорогой' : 'Дорогому гостю'}
+            {hasName ? 'Дорогой' : 'Дорогой гость!'}
           </p>
         </Reveal>
 
@@ -58,15 +58,13 @@ export default function Greeting({ guestName }: { guestName: string }) {
           </p>
         </Reveal>
 
-        <Reveal delay={hasName ? 700 : 550} className="mt-14 flex flex-col items-center gap-4">
+        <Reveal delay={hasName ? 700 : 550} className="mt-16 sm:mt-20 flex flex-col items-center gap-5">
           <span className="block h-px w-24 bg-gradient-to-r from-transparent via-gold-500 to-transparent" />
           <p className="font-body text-[10px] sm:text-[11px] font-light tracking-[0.45em] uppercase text-gold-600">
             С уважением
           </p>
-          <p className="font-display italic text-xl sm:text-2xl text-ink leading-snug">
-            Семьи {wedding.groomFamily}
-            <span className="mx-2 text-gold-500/80">·</span>
-            {wedding.brideFamily}
+          <p className="mt-2 font-display italic font-light text-gold-600 leading-none tracking-tight text-[2rem] sm:text-[2.5rem] md:text-[2.75rem]">
+            {wedding.groom} <span className="font-script text-gold-500">&amp;</span> {wedding.bride}
           </p>
         </Reveal>
       </div>

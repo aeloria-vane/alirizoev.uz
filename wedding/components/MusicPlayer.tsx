@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 
-const START_SECONDS = 7
+const START_SECONDS = 0
 const VOLUME = 0.6
 
 export default function MusicPlayer() {
