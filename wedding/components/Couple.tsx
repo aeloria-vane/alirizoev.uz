@@ -35,7 +35,7 @@ export default function Couple() {
               {wedding.groomFirstName}
             </h3>
             <p className="mt-3 font-display italic text-sm text-ink-soft">
-              сын семьи {wedding.family}
+              сын семьи {wedding.groomFamily}
             </p>
           </Reveal>
 
@@ -81,7 +81,7 @@ export default function Couple() {
               {wedding.brideFirstName}
             </h3>
             <p className="mt-3 font-display italic text-sm text-ink-soft">
-              дочь семьи {wedding.family}
+              дочь семьи {wedding.brideFamily}
             </p>
           </Reveal>
         </div>

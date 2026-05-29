@@ -6,6 +6,8 @@ import Details from '@/components/Details'
 import Venue from '@/components/Venue'
 import Quote from '@/components/Quote'
 import Gallery from '@/components/Gallery'
+import Programme from '@/components/Programme'
+import DressCode from '@/components/DressCode'
 import Footer from '@/components/Footer'
 import { normalizeGuestName } from '@/lib/wedding'
 
@@ -25,7 +27,9 @@ export default function Page({ searchParams }: { searchParams: SearchParams }) {
       <Quote />
       <Countdown />
       <Details />
+      <Programme />
       <Venue />
+      <DressCode />
       <Gallery />
       <Footer />
     </main>

@@ -58,12 +58,6 @@ export default function Venue() {
             Открыть в Яндекс.Картах
           </a>
         </Reveal>
-
-        <Reveal delay={350} className="mt-10 text-center">
-          <p className="font-display italic text-base sm:text-lg text-ink-soft">
-            Координаты: {coords.lat.toFixed(6)}, {coords.lng.toFixed(6)}
-          </p>
-        </Reveal>
       </div>
     </section>
   )

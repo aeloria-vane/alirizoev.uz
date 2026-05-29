@@ -211,12 +211,12 @@ export async function GET(req: Request) {
             justifyContent: 'center',
             fontSize: 11,
             letterSpacing: 6,
-            color: 'rgba(201, 169, 106, 0.7)',
+            color: 'rgba(201, 169, 106, 0.75)',
             fontFamily: 'Inter',
             fontWeight: 300,
           }}
         >
-          СЕМЬЯ ФАРХАДОВЫХ
+          СЕМЬИ {wedding.groomFamily.toUpperCase()} · {wedding.brideFamily.toUpperCase()}
         </div>
       </div>
     ),

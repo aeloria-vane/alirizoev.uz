@@ -45,10 +45,27 @@ export default function Footer() {
             </span>
           </div>
           <span className="font-script text-3xl text-gold-300 mt-2">с любовью</span>
-          <p className="font-body text-[10px] tracking-[0.45em] uppercase text-ivory-50/55">
-            Семья {wedding.family} · 2026
+          <p className="font-body text-[10px] tracking-[0.45em] uppercase text-ivory-50/55 leading-relaxed">
+            Семьи {wedding.groomFamily}
+            <span className="mx-2 text-gold-300/70">·</span>
+            {wedding.brideFamily}
           </p>
+          <p className="font-body text-[10px] tracking-[0.45em] uppercase text-ivory-50/45">2026</p>
         </Reveal>
+      </div>
+
+      {/* Discrete developer credit */}
+      <div className="relative z-10 mt-14 sm:mt-20 flex justify-center">
+        <a
+          href="https://t.me/kwusamo"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group inline-flex items-center gap-2 font-body text-[9px] tracking-[0.32em] uppercase text-ivory-50/30 hover:text-gold-300/80 transition-colors duration-500"
+        >
+          <span>Разработка</span>
+          <span className="text-ivory-50/20 group-hover:text-gold-300/60">·</span>
+          <span className="tracking-[0.18em] normal-case">telegram @kwusamo</span>
+        </a>
       </div>
     </footer>
   )

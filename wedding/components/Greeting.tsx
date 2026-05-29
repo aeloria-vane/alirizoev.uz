@@ -10,7 +10,7 @@ export default function Greeting({ guestName }: { guestName: string }) {
       <div className="relative z-10 mx-auto max-w-2xl text-center">
         <Reveal>
           <div className="flex justify-center mb-8">
-            <div className="flex items-center justify-center w-20 h-20 border border-gold-400/45 rounded-full bg-ivory-50">
+            <div className="flex items-center justify-center w-20 h-20 border border-gold-400/45 rounded-full bg-ivory-50 shadow-[0_8px_30px_-12px_rgba(176,141,87,0.25)]">
               <span className="font-display italic font-light text-3xl text-gold-600 leading-none">
                 Б<span className="text-gold-400">·</span>Н
               </span>
@@ -40,19 +40,9 @@ export default function Greeting({ guestName }: { guestName: string }) {
 
         <Reveal delay={hasName ? 500 : 300}>
           <p className="mt-10 font-display italic text-xl sm:text-2xl md:text-[26px] leading-relaxed text-ink-soft">
-            {hasName ? (
-              <>
-                Семья {wedding.family} сердечно приглашает Вас разделить
-                с нами один из самых важных и счастливых дней в нашей жизни —
-                торжественную церемонию бракосочетания.
-              </>
-            ) : (
-              <>
-                Семья {wedding.family} сердечно приглашает Вас разделить
-                с нами один из самых важных и счастливых дней в нашей жизни —
-                торжественную церемонию бракосочетания.
-              </>
-            )}
+            Семьи {wedding.groomFamily} и {wedding.brideFamily} сердечно
+            приглашают Вас разделить с нами один из самых важных и счастливых
+            дней в нашей жизни — торжественную церемонию бракосочетания.
           </p>
         </Reveal>
 

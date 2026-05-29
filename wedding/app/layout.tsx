@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, Inter, Pinyon_Script } from 'next/font/google'
 import MotionProvider from '@/components/MotionProvider'
+import MusicPlayer from '@/components/MusicPlayer'
 import './globals.css'
 
 const cormorant = Cormorant_Garamond({
@@ -76,6 +77,7 @@ export default function RootLayout({
     <html lang="ru" className={`${cormorant.variable} ${inter.variable} ${pinyon.variable}`}>
       <body className="font-body antialiased">
         <MotionProvider>{children}</MotionProvider>
+        <MusicPlayer />
       </body>
     </html>
   )

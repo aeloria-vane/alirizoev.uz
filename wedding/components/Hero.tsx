@@ -51,9 +51,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease, delay: 0.55 }}
-            className="font-body text-[10px] sm:text-xs font-light tracking-[0.4em] uppercase text-ivory-50/80 mb-6 sm:mb-8"
+            className="font-body text-[9px] sm:text-xs font-light tracking-[0.32em] sm:tracking-[0.4em] uppercase text-ivory-50/80 mb-6 sm:mb-8"
           >
-            Вместе с семьёй {wedding.family}
+            Семьи {wedding.groomFamily}
+            <span className="text-gold-300/80 mx-2">·</span>
+            {wedding.brideFamily}
           </motion.p>
 
           <motion.h1
