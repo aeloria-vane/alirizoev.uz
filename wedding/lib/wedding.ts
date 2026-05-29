@@ -18,10 +18,12 @@ export const wedding = {
     palette: ['#1F3A2E', '#B08D57', '#2A2520', '#F4EDE0'],
   },
   programme: [
-    { time: '18:00', title: 'Сбор гостей', subtitle: 'Welcome-зона, фотозона' },
-    { time: '19:00', title: 'Никох', subtitle: 'Бракосочетание' },
-    { time: '20:00', title: 'Дастархан', subtitle: 'Ужин и поздравления' },
-    { time: '22:00', title: 'Танцы', subtitle: 'Праздник до полуночи' },
+    { time: '18:00', title: 'Сбор гостей', subtitle: 'Welcome' },
+    { time: '18:30', title: 'Холодные напитки', subtitle: 'Welcome Drink' },
+    { time: '19:00', title: 'Начало банкета', subtitle: "Let's Celebrate" },
+    { time: '21:30', title: 'Белый танец', subtitle: 'Magical Dance' },
+    { time: '22:00', title: 'Свадебный торт', subtitle: 'Cake Moment' },
+    { time: '23:00', title: 'Завершение вечера', subtitle: 'Farewell Wishes' },
   ],
 } as const
 

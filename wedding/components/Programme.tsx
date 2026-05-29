@@ -4,31 +4,48 @@ import { wedding } from '@/lib/wedding'
 
 function ProgrammeIcon({ index }: { index: number }) {
   const icons = [
-    // Welcome — flute glasses
+    // 0 · Welcome — open doors / archway
     <svg key="welcome" viewBox="0 0 48 48" fill="none" className="w-7 h-7 text-gold-500" aria-hidden>
-      <path d="M16 8 L18 22 Q18 26 22 27 V40 H14 V40 H22" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M32 8 L30 22 Q30 26 26 27 V40 H34 V40 H26" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M16 8 H32" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+      <path d="M10 40 V20 Q10 10 24 10 Q38 10 38 20 V40" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+      <path d="M10 40 H38" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+      <path d="M24 14 V36" stroke="currentColor" strokeWidth="0.8" opacity="0.6" />
+      <circle cx="20" cy="26" r="0.9" fill="currentColor" />
+      <circle cx="28" cy="26" r="0.9" fill="currentColor" />
     </svg>,
-    // Ceremony — rings
-    <svg key="rings" viewBox="0 0 48 48" fill="none" className="w-7 h-7 text-gold-500" aria-hidden>
-      <circle cx="19" cy="26" r="11" stroke="currentColor" strokeWidth="1" />
-      <circle cx="29" cy="26" r="11" stroke="currentColor" strokeWidth="1" />
-      <path d="M16 12 L19 16 L22 12" stroke="currentColor" strokeWidth="0.8" />
-      <path d="M26 12 L29 16 L32 12" stroke="currentColor" strokeWidth="0.8" />
+    // 1 · Welcome Drink — champagne flutes
+    <svg key="flutes" viewBox="0 0 48 48" fill="none" className="w-7 h-7 text-gold-500" aria-hidden>
+      <path d="M16 8 L18 22 Q18 27 22 28 V40 M14 40 H22" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M32 8 L30 22 Q30 27 26 28 V40 M34 40 H26" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M15 8 L19 4 L29 4 L33 8" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round" opacity="0.7" />
     </svg>,
-    // Dinner — plate with cutlery
+    // 2 · Let's Celebrate — plate with cutlery
     <svg key="dinner" viewBox="0 0 48 48" fill="none" className="w-7 h-7 text-gold-500" aria-hidden>
-      <circle cx="24" cy="24" r="14" stroke="currentColor" strokeWidth="1" />
-      <circle cx="24" cy="24" r="9" stroke="currentColor" strokeWidth="0.5" opacity="0.6" />
-      <path d="M10 14 V24 M10 14 L13 14 M10 24 Q10 30 13 30 V40" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" />
-      <path d="M38 12 V40 M34 12 V20 Q34 24 38 24" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" />
+      <circle cx="24" cy="24" r="13" stroke="currentColor" strokeWidth="1" />
+      <circle cx="24" cy="24" r="9" stroke="currentColor" strokeWidth="0.5" opacity="0.55" />
+      <path d="M9 13 V21 M9 13 L12 13 M9 21 Q9 27 12 27 V40" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" />
+      <path d="M39 11 V40 M35 11 V20 Q35 24 39 24" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" />
     </svg>,
-    // Dance — musical notes
+    // 3 · Magical Dance — musical notes
     <svg key="dance" viewBox="0 0 48 48" fill="none" className="w-7 h-7 text-gold-500" aria-hidden>
       <path d="M18 32 V14 L34 11 V28" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" strokeLinecap="round" />
       <ellipse cx="15" cy="33" rx="4" ry="3" stroke="currentColor" strokeWidth="1" />
       <ellipse cx="31" cy="30" rx="4" ry="3" stroke="currentColor" strokeWidth="1" />
+    </svg>,
+    // 4 · Cake Moment — tiered cake with candle
+    <svg key="cake" viewBox="0 0 48 48" fill="none" className="w-7 h-7 text-gold-500" aria-hidden>
+      <rect x="11" y="32" width="26" height="8" rx="1" stroke="currentColor" strokeWidth="1" />
+      <rect x="15" y="24" width="18" height="8" rx="1" stroke="currentColor" strokeWidth="1" />
+      <rect x="19" y="16" width="10" height="8" rx="1" stroke="currentColor" strokeWidth="1" />
+      <path d="M24 16 V11" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+      <path d="M24 11 Q22 9 24 7 Q26 9 24 11 Z" fill="currentColor" />
+      <path d="M11 36 H37 M15 28 H33 M19 20 H29" stroke="currentColor" strokeWidth="0.4" opacity="0.55" />
+    </svg>,
+    // 5 · Farewell Wishes — star sparkle
+    <svg key="farewell" viewBox="0 0 48 48" fill="none" className="w-7 h-7 text-gold-500" aria-hidden>
+      <path d="M24 8 L26.5 20 L38 22 L26.5 24 L24 36 L21.5 24 L10 22 L21.5 20 Z" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" />
+      <circle cx="24" cy="22" r="1.6" fill="currentColor" />
+      <path d="M9 12 L9 16 M7 14 L11 14" stroke="currentColor" strokeWidth="0.7" strokeLinecap="round" opacity="0.6" />
+      <path d="M39 30 L39 34 M37 32 L41 32" stroke="currentColor" strokeWidth="0.7" strokeLinecap="round" opacity="0.6" />
     </svg>,
   ]
   return icons[index] ?? icons[0]
